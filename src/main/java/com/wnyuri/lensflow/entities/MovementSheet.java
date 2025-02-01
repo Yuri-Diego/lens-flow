@@ -17,7 +17,7 @@ public class MovementSheet {
     @Column(name = "creation_date")
     private LocalDateTime date;
 
-    @OneToMany(mappedBy = "movement", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "movementSheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Movement> movements;
 
     public MovementSheet() {}

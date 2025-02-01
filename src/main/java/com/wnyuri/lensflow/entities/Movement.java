@@ -16,13 +16,17 @@ public class Movement {
     @ManyToOne
     @JoinColumn(name = "box_id", nullable = false)
     private Box box;
+
     @ManyToOne
     @JoinColumn(name = "movement_sheet_id", nullable = false)
     private MovementSheet movementSheet;
 
 
     private String client;
+
+    @Column(name = "order_service")
     private String order;
+
     private boolean completed;
     private LocalDateTime time;
 

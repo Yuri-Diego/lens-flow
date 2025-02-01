@@ -2,6 +2,7 @@ package com.wnyuri.lensflow.services;
 
 import com.wnyuri.lensflow.dto.BoxDTO;
 import com.wnyuri.lensflow.entities.Box;
+import com.wnyuri.lensflow.mappers.BoxMapper;
 import com.wnyuri.lensflow.repositories.BoxRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class BoxService {
     @Transactional(readOnly = true)
     public List<BoxDTO> findAll(){
         List<Box> boxes = boxRepository.findAll();
-        return boxes.stream().map(BoxDTO::fromEntity).toList();
+        return boxes.stream().map(BoxMapper::toDTO).toList();
     }
 
     // IMPLEMENTACAO PARA BARRA DE BUSCA POR NUMERO

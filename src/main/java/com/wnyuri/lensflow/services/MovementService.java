@@ -22,6 +22,7 @@ public class MovementService {
     @Autowired
     private BoxRepository boxRepository;
 
+    // Buscar Movement com os atributos de box pelo ID de Movement_Sheet
     public List<MovementWithBoxDTO> getMovementsWithBoxBySheetId(Long sheetId) {
         List<Movement> movements = movementRepository.findByMovementSheetId(sheetId);
 
@@ -34,4 +35,10 @@ public class MovementService {
         List<Movement> movements = movementRepository.findAll();
         return movements.stream().map(MovementMapper::toDTO).toList();
     }
+
+    public List<MovementWithBoxDTO> getMovementWithBoxByBoxNumber(int boxNumber) {
+        List<Movement> movements = movementRepository.findByBoxNumber(boxNumber);
+        return movements.stream().map(MovementWithBoxMapper::toMovementWithBoxDTO).toList();
+    }
+
 }

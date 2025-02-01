@@ -8,4 +8,7 @@ import java.util.List;
 public interface MovementRepository extends JpaRepository<Movement, Long> {
 
     List<Movement> findByMovementSheetId(Long sheetId);
+
+    List<Movement> findByBoxNumber(int boxNumber);
+
 }

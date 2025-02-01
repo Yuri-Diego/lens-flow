@@ -3,6 +3,7 @@ package com.wnyuri.lensflow.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,13 +19,15 @@ public class MovementSheet {
     private LocalDate date;
 
     @OneToMany(mappedBy = "movementSheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Movement> movements;
+    private List<Movement> movements = new ArrayList<>();
 
-    public MovementSheet() {}
+    public MovementSheet(){
+        this.date = LocalDate.now();
+    }
 
-    public MovementSheet(LocalDate date, List<Movement> movements) {
-        this.date = date;
-        this.movements = movements;
+    public MovementSheet(LocalDate creationDate, List<Movement> movements) {
+        this.date = creationDate;
+        this.movements = new ArrayList<>();
     }
 
     public long getId() {

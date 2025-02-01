@@ -17,9 +17,27 @@ public class MovementSheetService {
     @Autowired
     private MovementSheetRepository movementSheetRepository;
 
+
     @Transactional
     public List<MovementSheetDTO> getMovementSheetsByDate(LocalDate date) {
         List<MovementSheet> movementSheets = movementSheetRepository.findByDate(date);
         return movementSheets.stream().map(MovementSheetMapper::toDTO).toList();
+    }
+
+    // Cria uma nova folha (MovementSheet) na data atual
+    @Transactional
+    public MovementSheetDTO createMovementSheet() {
+        MovementSheet movementSheet = new MovementSheet(); // O creationDate é definido automaticamente
+        movementSheet = movementSheetRepository.save(movementSheet); // Salva a MovementSheet
+
+        return MovementSheetMapper.toDTO(movementSheet); // Retorna o DTO
+    }
+
+    @Transactional
+    public void deleteMovementSheetById(Long id) {
+        MovementSheet movementSheet = movementSheetRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("MovementSheet não encontrada com o ID: " + id));
+
+        movementSheetRepository.delete(movementSheet); // Deleta a MovementSheet
     }
 }

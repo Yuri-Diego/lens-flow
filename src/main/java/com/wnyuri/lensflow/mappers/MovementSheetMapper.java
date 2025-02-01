@@ -18,7 +18,6 @@ public class MovementSheetMapper {
                 .collect(Collectors.toList());
 
         return new MovementSheetDTO(
-                movementSheet.getId(),
                 movementSheet.getDate(),
                 movementDTOs
         );
@@ -34,7 +33,6 @@ public class MovementSheetMapper {
                 movementSheetDTO.date(),
                 movements
         );
-        entity.setId(movementSheetDTO.id()); // Define o ID, se necessário
         return entity;
     }
 }

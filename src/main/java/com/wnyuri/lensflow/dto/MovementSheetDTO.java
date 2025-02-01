@@ -1,12 +1,12 @@
 package com.wnyuri.lensflow.dto;
 
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public record MovementSheetDTO(
         Long id,
-        LocalDateTime date,
+        LocalDate date,
         List<MovementDTO> movements
 ) {
 

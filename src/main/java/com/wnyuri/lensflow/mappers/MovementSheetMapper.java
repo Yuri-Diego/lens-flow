@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class MovementSheetMapper {
+
+    // Converte a entidade MovementSheet para o DTO MovementSheetDTO
     public static MovementSheetDTO toDTO(MovementSheet movementSheet) {
         List<MovementDTO> movementDTOs = movementSheet.getMovements().stream()
                 .map(MovementMapper::toDTO) // Usa o MovementMapper para converter cada Movement

@@ -2,7 +2,7 @@ package com.wnyuri.lensflow.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -15,14 +15,14 @@ public class MovementSheet {
     private long id;
 
     @Column(name = "creation_date")
-    private LocalDateTime date;
+    private LocalDate date;
 
     @OneToMany(mappedBy = "movementSheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Movement> movements;
 
     public MovementSheet() {}
 
-    public MovementSheet(LocalDateTime date, List<Movement> movements) {
+    public MovementSheet(LocalDate date, List<Movement> movements) {
         this.date = date;
         this.movements = movements;
     }
@@ -35,11 +35,11 @@ public class MovementSheet {
         this.id = id;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

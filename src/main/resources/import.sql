@@ -11,11 +11,11 @@ INSERT INTO tb_box (id_box, number, status, color) VALUES (9, 109, 'Free', 'Gray
 INSERT INTO tb_box (id_box, number, status, color) VALUES (10, 110, 'Occupied', 'Black');
 
 -- Inserir dados na tabela tb_movement_sheet
-INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (1, '2023-10-01 10:00:00');
-INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (2, '2023-10-02 11:30:00');
-INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (3, '2023-10-03 09:15:00');
-INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (4, '2023-10-04 14:45:00');
-INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (5, '2023-10-05 16:00:00');
+INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (1, '2023-10-01');
+INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (2, '2023-10-02');
+INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (3, '2023-10-03');
+INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (4, '2023-10-04');
+INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (5, '2023-10-05');
 
 -- Inserir dados na tabela tb_movement
 INSERT INTO tb_movement (id_movement, box_id, movement_sheet_id, client, order_service, completed, time) VALUES (1, 1, 1, 'Client A', 'Order 123', false, '2023-10-01 10:15:00');

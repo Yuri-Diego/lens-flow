@@ -22,8 +22,8 @@ public class MovementService {
     @Autowired
     private BoxRepository boxRepository;
 
-    public List<MovementWithBoxDTO> getMovementsWithBox() {
-        List<Movement> movements = movementRepository.findAll();
+    public List<MovementWithBoxDTO> getMovementsWithBoxBySheetId(Long sheetId) {
+        List<Movement> movements = movementRepository.findByMovementSheetId(sheetId);
 
         return movements.stream()
                 .map(MovementWithBoxMapper::toMovementWithBoxDTO) // Usa o mapper para converter

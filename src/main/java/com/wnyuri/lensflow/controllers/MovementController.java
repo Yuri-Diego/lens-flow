@@ -23,6 +23,7 @@ public class MovementController {
         return new ResponseEntity<>(movements, HttpStatus.OK);
     }
 
+    // Buscar MovementWithBox por numero da box
     @GetMapping(value = "/by-box/{boxNumber}")
     public ResponseEntity<List<MovementWithBoxDTO>> findMovementWithBoxByBoxNumber(@PathVariable int boxNumber) {
         List<MovementWithBoxDTO> movements = movementService.getMovementWithBoxByBoxNumber(boxNumber);

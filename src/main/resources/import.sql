@@ -1,14 +1,14 @@
 -- Inserir dados na tabela tb_box
-INSERT INTO tb_box (id_box, number, status, color) VALUES (1, 101, 'Free', 'Blue');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (2, 102, 'Occupied', 'Red');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (3, 103, 'Free', 'Green');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (4, 104, 'Occupied', 'Yellow');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (5, 105, 'Free', 'Purple');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (6, 106, 'Occupied', 'Orange');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (7, 107, 'Free', 'Pink');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (8, 108, 'Occupied', 'Brown');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (9, 109, 'Free', 'Gray');
-INSERT INTO tb_box (id_box, number, status, color) VALUES (10, 110, 'Occupied', 'Black');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (100, 101, 'Free', 'Blue');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (200, 102, 'Occupied', 'Red');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (300, 103, 'Free', 'Green');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (400, 104, 'Occupied', 'Yellow');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (500, 105, 'Free', 'Purple');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (600, 106, 'Occupied', 'Orange');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (700, 107, 'Free', 'Pink');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (800, 108, 'Occupied', 'Brown');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (900, 109, 'Free', 'Gray');
+INSERT INTO tb_box (id_box, number, status, color) VALUES (1000, 110, 'Occupied', 'Black');
 
 -- Inserir dados na tabela tb_movement_sheet
 INSERT INTO tb_movement_sheet (id_movement_sheet, creation_date) VALUES (1, '2023-10-01');
